@@ -1,0 +1,42 @@
+﻿
+Delegates and Events Concepts Project Notes
+
+Overview
+This project demonstrates the use of delegates and events in C#, including scenarios with and without the use of EventArgs. The example simulates a financial monitoring system where a bank account and stock prices are monitored, and notifications are triggered based on specific events.
+
+Key Components
+
+1. BankAccount Class
+   - Uses delegates and events to notify subscribers when deposits or withdrawals are made.
+   - Events:
+     - OnDeposit: Triggered when a deposit is made to the account.
+     - OnWithdrawal: Triggered when a withdrawal is made from the account.
+   - The events use the custom BankOperationEventArgs class to pass additional data such as the operation type, amount, and updated balance.
+
+2. Stock Class
+   - Monitors stock price changes and triggers events when the price crosses specified thresholds.
+   - Events:
+     - OnPriceAboveThreshold: Triggered when the stock price goes above the upper threshold.
+     - OnPriceBelowThreshold: Triggered when the stock price goes below the lower threshold.
+   - These events do not use EventArgs, making them simpler and focused purely on the occurrence of the event.
+
+3. NotificationService Class
+   - Subscribes to both BankAccount and Stock events.
+   - Methods:
+     - OnDepositMade: Handles the OnDeposit event from the BankAccount class.
+     - OnWithdrawalMade: Handles the OnWithdrawal event from the BankAccount class.
+     - AlertPriceAboveThreshold: Handles the OnPriceAboveThreshold event from the Stock class.
+     - AlertPriceBelowThreshold: Handles the OnPriceBelowThreshold event from the Stock class.
+
+4. Program.cs
+   - Serves as the entry point of the program, setting up the objects and handling the execution of the event-driven financial monitoring system.
+   - It creates instances of BankAccount and Stock, and subscribes the NotificationService to their events.
+   - The program simulates banking operations and stock price changes, triggering appropriate events and displaying notifications.
+
+Application
+This project showcases how to use delegates and events to build an event-driven system in C#. The BankAccount class demonstrates the use of custom EventArgs to pass additional data with events, while the Stock class illustrates a simpler event-handling scenario without EventArgs. The NotificationService class responds to these events, providing real-time feedback.
+
+Usage
+- The Main method in Program.cs sets up the system, performing operations on BankAccount and Stock instances, and handling events as they occur.
+- The events and their respective handlers ensure that the system responds appropriately to changes, such as deposits, withdrawals, and stock price fluctuations.
+

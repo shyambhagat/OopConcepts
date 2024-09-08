@@ -1,0 +1,36 @@
+﻿
+Functional Concepts Project Notes
+
+Overview
+This project demonstrates the use of Functors, Predicates, and Actions in C#. The example focuses on managing a collection of products in an e-commerce application, applying discounts, filtering products, and performing actions on each product.
+
+Key Components
+
+1. Product Class
+   - Represents a product with properties like `Id`, `Name`, `Price`, and `IsAvailable`.
+
+2. DiscountFunctor Class
+   - A functor class that encapsulates a discount strategy.
+   - The discount strategy is passed as a `Func<double, double>` delegate and applied to a product's price.
+
+3. ProductRepository Class
+   - Manages a collection of products.
+   - Methods:
+     - AddProduct: Adds a product to the repository.
+     - FilterProducts: Filters products using a `Predicate<Product>` delegate.
+     - ForEachProduct: Executes an `Action<Product>` delegate on each product in the repository.
+     - FindById: Finds a product by its ID.
+
+4. Program.cs
+   - Demonstrates the usage of Functors, Predicates, and Actions in a practical scenario:
+     - Functor: The `DiscountFunctor` is used to apply a 10% discount to a product's price.
+     - Predicate: The `IsProductAvailable` method is used to filter products that are available.
+     - Action: The `PrintProductDetails` method is used to print details of each product in the repository.
+
+Usage
+- The Functor (DiscountFunctor) allows for dynamic discount strategies to be applied to product prices.
+- The Predicate (`IsProductAvailable`) filters the product collection based on availability.
+- The Action (`PrintProductDetails`) performs operations on each product, such as printing product details to the console.
+
+Summary
+This project illustrates how Functors, Predicates, and Actions can be applied in C# to build flexible and reusable components for managing and processing collections of objects like products. The use of traditional function definitions makes the code clear and accessible.

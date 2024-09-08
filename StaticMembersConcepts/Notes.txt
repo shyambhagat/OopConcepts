@@ -1,0 +1,34 @@
+﻿StaticMembersConcepts Project Notes
+
+Overview
+This project demonstrates the use of static members in C#, including static classes, methods, fields, and properties. The example simulates a bank account management system where interest rates are shared across all accounts, and the total number of accounts created is tracked.
+
+Key Components
+
+1. BankAccount Class
+   - Static Field (`_interestRate`):
+     Stores the interest rate that applies to all bank accounts. This field is shared across all instances of the BankAccount class.
+   - Static Field (`_accountCount`):
+     Tracks the total number of BankAccount instances created. It increments each time a new account is created.
+   - Static Property (`InterestRate`):
+     Provides access to the shared interest rate and allows it to be modified. This rate affects all future interest calculations for any account.
+   - Static Property (`AccountCount`):
+     Allows access to the total number of accounts created.
+   - Instance Properties:
+     - `AccountHolder`: Stores the name of the account holder. This is specific to each account.
+     - `Balance`: Stores the current balance of the account. This is also specific to each account.
+   - Constructor:
+     Initializes a new bank account with a specified account holder and initial balance. It also increments the `_accountCount` to track the number of accounts.
+   - Instance Methods:
+     - `ApplyInterest`: Applies the shared interest rate to the account's balance.
+     - `Deposit`: Adds a specified amount of money to the account's balance.
+     - `Withdraw`: Deducts a specified amount of money from the account's balance, provided sufficient funds are available.
+
+Application
+The project showcases the practical use of static members to manage shared data across multiple instances of a class. In this example, the interest rate and the total number of accounts are managed using static fields and properties, ensuring consistency and global access across the application.
+
+Usage
+- The static `InterestRate` can be set or modified to adjust the interest applied to all accounts.
+- The static `AccountCount` provides a global count of all bank accounts created.
+- Instance methods allow for account-specific operations such as applying interest, depositing funds, and withdrawing funds.
+

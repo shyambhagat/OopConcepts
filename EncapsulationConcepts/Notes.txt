@@ -1,0 +1,38 @@
+﻿EncapsulationConcepts Project Notes
+
+Overview
+The project demonstrates encapsulation in C#, where data and methods are bundled into classes, with controlled access using access modifiers (private, protected, internal, public).
+
+Key Classes
+
+- Bank Class
+
+  Attributes:
+  - private double BankBalance: Stores the bank's balance.
+  - public string BankName: Stores the bank's name.
+
+  Methods:
+  - private void LogBankOperation(string operation): Logs internal operations.
+  - public void ShowBankDetails(): Displays the bank name and balance after expenses.
+  - protected double GetBankBalance(): Provides access to the balance for derived classes.
+
+- Branch Class
+
+  Inherits from Bank.
+
+  Method:
+  - public void PerformOperations(): Accesses GetBankBalance to display the branch's balance.
+
+- Program Class
+
+  Main Method:
+  - Creates a Branch instance, sets the bank name, performs branch operations, and shows bank details.
+
+Encapsulation Concepts
+- Private: BankBalance and LogBankOperation are private, restricting access to within the class.
+- Protected: GetBankBalance is protected, accessible in Bank and its subclasses.
+- Public: BankName, ShowBankDetails, and PerformOperations are public, allowing external access.
+- Internal Interaction: The Bank class interacts with AllBankOperations to calculate expenses, demonstrating encapsulation while enabling complex operations.
+
+Application
+Encapsulation protects sensitive data (e.g., bank balance) while allowing controlled access and operations, such as in a real-world banking scenario.

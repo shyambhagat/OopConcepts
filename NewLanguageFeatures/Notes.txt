@@ -1,0 +1,58 @@
+﻿
+NewLanguageFeatures - Project Notes
+
+Overview
+This project demonstrates the use of various modern C# language features through practical examples. The scenario is an inventory system that manages products and orders. The project showcases how these new language features can be integrated into everyday coding practices to write more efficient, readable, and maintainable code.
+
+Key Concepts
+
+1. Read-Only Properties
+   - Properties that can only be set during initialization, providing immutability after the object is constructed.
+   - Example: The `Id` property in the `Product` class is read-only.
+
+2. Init-Only Setters
+   - Allows properties to be set only during object initialization. This ensures that once an object is created, its state cannot be changed.
+   - Example: The `Name` and `Price` properties in the `Product` class use init-only setters.
+
+3. Underscore in Numeric Literals
+   - Improves the readability of large numeric literals by allowing underscores as digit separators.
+   - Example: The `Price` property in the `Product` class is initialized with `1_000m`, making it easier to read.
+
+4. Custom 'With' Method for Copying Objects
+   - Instead of using `with` expressions (available in records), a custom method is used to mimic the behavior, creating a copy of the object with some modified properties.
+   - Example: The `WithPrice` method in the `Product` class creates a copy of a product with a modified price.
+
+5. Target-Typed `new` Expressions
+   - Allows the use of `new` without explicitly specifying the type when the type can be inferred.
+   - Example: `Product laptop = new(1, "Laptop");` demonstrates the use of target-typed `new` expressions.
+
+6. Switch Expressions
+   - Provides a concise way to return a value based on multiple conditions.
+   - Example: The `GetProductCategory` method in the `Product` class uses a switch expression to determine the product's category.
+
+7. Global Usings
+   - Global using directives allow namespaces to be available throughout the project without having to import them in each file.
+   - Example: The `GlobalUsings.cs` file contains global using directives for commonly used namespaces.
+
+8. Interpolated String Improvements
+   - Enhances string interpolation, allowing complex formatting and expressions directly within interpolated strings.
+   - Example: The `ToString` method in the `Order` class uses advanced string interpolation with JSON serialization.
+
+9. Tuples
+   - Provides a lightweight way to group multiple values into a single object without defining a separate class.
+   - Example: The `Order` class can use tuples to manage multiple values, though not explicitly shown, this concept is utilized internally.
+
+10. Local Functions
+    - Functions defined within a method, providing encapsulation and clarity by keeping related logic together.
+    - Example: The `ApplyTax` local function inside the `CalculateTotal` method in the `Order` class.
+
+11. Null-Coalescing Assignment Operator (`??=`)
+    - Assigns a value to a variable only if the variable is null.
+    - Example: The `Products` property in the `Order` class uses `??=` to ensure the product list is initialized if it's null.
+
+Practical Usage
+- The project showcases how modern C# features can be applied to create more expressive, concise, and maintainable code.
+- The examples demonstrate practical scenarios such as managing products and orders, applying discounts, calculating totals with tax, and using switch expressions for category determination.
+
+Conclusion
+The NewLanguageFeatures project illustrates the integration of new C# language features in a practical application. These features allow developers to write cleaner, more efficient code, reduce boilerplate, and improve overall code readability and maintainability.

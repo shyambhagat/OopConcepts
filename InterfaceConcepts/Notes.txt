@@ -1,0 +1,25 @@
+﻿InterfaceConcepts Project Notes
+
+Overview
+Demonstrates the use of interfaces in C# to define a contract for customer management operations using a CSV file as a basic database.
+
+Key Components
+
+- Customer Class
+  - Represents customer data with properties like FullName, Address, City, Region, PostalCode, and Country.
+
+- CustomerRepository Class
+  - Implements IReadCrudLogic, ICrudOperation, and IMultiCrudOperations interfaces.
+  - Manages customer data stored in a CSV file, providing methods to add, update, delete, and retrieve customers.
+
+- ICrudOperation Interface
+  - Defines basic CRUD operations (Create, Read, Update, Delete) for managing customer data.
+
+- IMultiCrudOperations Interface
+  - Adds methods to perform batch operations like adding or updating multiple customers at once.
+
+- IReadCrudLogic Interface
+  - Provides methods for reading customer data, such as getting all customers or retrieving a customer by ID.
+
+Application
+This example models a customer management system where data is stored in a CSV file. It uses interfaces to ensure consistent implementation of CRUD operations across different classes and allows for managing customers efficiently.

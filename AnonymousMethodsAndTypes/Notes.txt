@@ -1,0 +1,37 @@
+﻿Anonymous Methods and Types in C# - Notes
+
+Overview
+This example demonstrates the use of anonymous methods and anonymous types in C#. 
+Anonymous methods provide a way to define inline methods without needing to declare a separate method in a class, 
+while anonymous types allow for creating temporary objects without explicitly defining a class.
+
+Key Concepts
+
+1. Anonymous Methods
+   - Inline methods that do not require a separate method definition.
+   - Can be used for operations like filtering, sorting, or any operation where a short method is needed.
+   - Useful in scenarios where the method logic is simple and not reused elsewhere.
+
+2. Anonymous Types
+   - Allow the creation of temporary, unnamed types that contain a set of read-only properties.
+   - Useful for scenarios where a simple, one-time use object is needed without the overhead of creating a full class.
+   - Often used in LINQ queries to shape the data into a desired form.
+
+Practical Example
+
+1. Product Class
+   - Represents a product with properties like Id, Name, Price, and Category.
+
+2. Filtering Products
+   - Uses an anonymous method with the FindAll method to filter products by category.
+
+3. Sorting Products
+   - Uses another anonymous method with the Sort method to sort products by price.
+
+4. Anonymous Types for Projection
+   - After filtering and sorting, the products are projected into an anonymous type that only contains the Name and Price properties.
+
+Usage and Output
+
+- The program creates a list of products, filters them by the "Electronics" category, sorts them by price, and then uses an anonymous type to display a summary.
+- This demonstrates the flexibility of anonymous methods and types in scenarios where temporary and concise logic or data structures are needed.

@@ -1,0 +1,33 @@
+﻿
+PartialConcepts - Project Notes
+
+Overview
+This project demonstrates the use of partial classes and partial methods in C#. Partial classes allow you to split the definition of a class across multiple files, while partial methods enable you to define method signatures in one part of a class and implement them in another part. This is particularly useful in large projects where different aspects of a class may need to be managed separately.
+
+Key Concepts
+
+1. Partial Classes
+   - Partial classes allow the definition of a class to be split across multiple files.
+   - Each file contains a portion of the class definition, which the compiler combines into a single class at compile time.
+   - Example: The `Customer` class is split into `Customer.Data.cs` and `Customer.Operations.cs`, separating the data properties from the operations.
+
+2. Partial Methods
+   - Partial methods allow you to declare a method in one part of a partial class and optionally implement it in another part.
+   - If a partial method is declared but not implemented, the compiler removes the method call entirely, resulting in no performance overhead.
+   - Example: The `OnCustomerCreated` and `OnEmailUpdated` methods are declared as partial methods in `Customer.Data.cs` and implemented in `Customer.Operations.cs`.
+
+3. Encapsulation of Customer Data and Operations
+   - The `Customer` class manages customer-related data, such as `Id`, `Name`, and `Email`.
+   - The class also includes methods to update the customer’s email and handle customer-related operations.
+   - Example: The `UpdateEmail` method in `Customer.Operations.cs` updates the customer's email and triggers the partial method `OnEmailUpdated`.
+
+4. Separation of Concerns
+   - Partial classes help in separating concerns by allowing different parts of a class to be organized in separate files.
+   - This improves code readability and maintainability, especially in larger projects where different team members may work on different aspects of the same class.
+
+Practical Usage
+- Partial classes and methods are useful in scenarios where a class is large and has multiple responsibilities that can be logically separated into different files.
+- They also facilitate collaboration in larger teams by allowing different developers to work on different parts of the same class without causing conflicts.
+
+Conclusion
+The PartialConcepts project illustrates the power of partial classes and partial methods in C#. By allowing the separation of data and operations into different files, these features improve the organization and maintainability of the code, making it easier to manage large and complex projects.

@@ -1,0 +1,25 @@
+﻿OopConcepts Project Notes
+
+Overview
+Demonstrates key Object-Oriented Programming (OOP) concepts in C#, such as encapsulation, inheritance, polymorphism, and abstraction.
+
+Key Concepts
+
+- Encapsulation
+  - Bundles data and methods within classes.
+  - Example: `Bank` class with private fields and public methods.
+
+- Inheritance
+  - Creates subclasses that inherit from a superclass.
+  - Example: `Branch` class inherits from `Bank`.
+
+- Polymorphism
+  - Methods behave differently based on the object calling them.
+  - Example: Overriding methods in the `Branch` class.
+
+- Abstraction
+  - Hides complex details, showing only necessary features.
+  - Example: Abstract classes or interfaces.
+
+Application
+Practical examples, like bank operations, demonstrate OOP principles in a real-world context.

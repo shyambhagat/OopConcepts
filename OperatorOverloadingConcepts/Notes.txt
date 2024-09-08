@@ -1,0 +1,21 @@
+﻿Operator_Overloading Project Notes
+
+Overview
+Demonstrates operator overloading in C# using a Customer class.
+
+Key Operator Overloads
+
+- + Operator (Wealth Addition)
+  - Adds the wealth of two customers.
+
+- - Operator (Wealth Subtraction)
+  - Subtracts the wealth of one customer from another.
+
+- > and < Operators (Wealth Comparison)
+  - Compares the wealth of two customers to determine who is wealthier.
+
+- + Operator (Address Merging)
+  - Merges additional address details into a customer’s address.
+
+Application
+This example simulates real-world operations like adding, subtracting, and comparing customer wealth, as well as merging address details, all through operator overloading.

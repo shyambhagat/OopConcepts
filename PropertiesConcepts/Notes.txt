@@ -1,0 +1,23 @@
+﻿PolymorphismConcepts Project Notes
+
+Overview
+Demonstrates polymorphism in C# through method overriding, method overloading, and abstract classes.
+
+Key Classes
+
+- Person Class
+  - Abstract base class with common properties and methods.
+  - Provides virtual GetLoan method for loan calculation.
+  - Base CalculateBonus method for bonus calculation.
+
+- Employee Class
+  - Inherits from Person.
+  - Overrides GetLoan method to customize loan eligibility.
+  - Overloads CalculateBonus with various implementations based on different criteria.
+
+- Contractor Class
+  - Inherits from Person.
+  - Uses base class implementations for GetLoan and CalculateBonus.
+
+Application
+Simulates real-world scenarios involving employees and contractors to demonstrate OOP principles like polymorphism, including method overriding and overloading.

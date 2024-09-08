@@ -1,0 +1,31 @@
+﻿Abstract_Classes Project Notes
+
+Overview
+Demonstrates the use of abstract classes and interfaces in C# to model financial products.
+
+Key Components
+
+- BaseProduct Class (Abstract)
+  - Serves as a base class for financial products.
+  - Requires implementation of Terminate and Settle methods by derived classes.
+
+- ForwardProduct Class
+  - Inherits from BaseProduct and implements ITrade interface.
+  - Represents a forward contract with specific trade and settlement logic.
+
+- NonDeliverableForwardProduct Class
+  - Inherits from BaseProduct and implements ITrade interface.
+  - Represents a non-deliverable forward (NDF) contract with its own penalties and settlement logic.
+
+- OptionsProduct Class
+  - Inherits from ForwardProduct and implements IOptionsTrade interface.
+  - Adds specialized operations like Call and Put for options trading.
+
+- ITrade Interface
+  - Ensures that all products implement basic trade operations (e.g., PerformTrade, Withdraw).
+
+- IOptionsTrade Interface
+  - Adds operations specific to options trading (e.g., Call, Put).
+
+Application
+Simulates real-world financial trading operations using abstract classes and interfaces to enforce consistent behavior across different financial products.

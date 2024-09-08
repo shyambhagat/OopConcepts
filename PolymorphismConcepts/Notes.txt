@@ -1,0 +1,27 @@
+﻿PropertiesConcepts Project Notes
+
+Overview
+Demonstrates the use of properties in C# with a focus on an Employee class.
+
+Key Properties
+
+- FirstName and LastName
+  - Simple properties with validation to ensure they are not empty.
+
+- FullName
+  - Read-only property that returns the employee's full name (FirstName + LastName).
+
+- Department
+  - Auto-implemented property representing the employee's department.
+
+- Salary
+  - Auto-implemented property with validation to ensure the salary is non-negative.
+
+- LogMessage
+  - Write-only property for logging messages related to the employee.
+
+- AnnualBonus
+  - Calculated property that returns 10% of the employee's salary as an annual bonus.
+
+Application
+This example models an employee in a management system, using properties to manage and validate employee data such as names, salary, department, and bonuses.

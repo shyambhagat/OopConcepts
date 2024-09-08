@@ -1,0 +1,36 @@
+﻿
+CustomAttributesAndReflection - Project Notes
+
+Overview:
+This project demonstrates the use of custom attributes in C#, focusing on validation and auditing within a product order and customer management scenario. The project includes creating custom validation attributes, applying them to class properties, and using reflection to validate, read, and set these properties dynamically.
+
+Key Concepts:
+
+1. Custom Attributes:
+   - CustomRequiredAttribute: Ensures that a property value is not null or empty.
+   - CustomMinLengthAttribute: Validates that a string property meets a minimum length requirement.
+   - CustomRangeAttribute: Validates that a numeric property value falls within a specified range.
+   - CustomEmailAttribute: Ensures that a string property is in a valid email format.
+
+2. Applying Attributes:
+   - The custom attributes are applied to properties in the Customer, Product, and Order classes to enforce specific validation rules.
+   - Example:
+     - CustomerId in the Customer class is decorated with CustomRequiredAttribute.
+     - Name in the Customer class is decorated with CustomMinLengthAttribute.
+     - Email in the Customer class is decorated with CustomEmailAttribute.
+     - Price in the Product class is decorated with CustomRangeAttribute.
+
+3. Reflection:
+   - Reflection is used to:
+     - Validate Properties: The ValidateObject method iterates through an object's properties and applies the validation logic defined by the custom attributes.
+     - Read Property Values: The ReadPropertyValues method reads and prints the values of all properties of an object.
+     - Set Property Values: The SetPropertyValue method sets the value of a specified property dynamically.
+
+Practical Usage:
+
+- Validation: Ensures that the object properties adhere to business rules before processing, storing, or displaying them.
+- Reflection: Provides a powerful way to interact with objects dynamically, enabling operations like validation, auditing, and property manipulation without hard-coding logic.
+
+Conclusion:
+
+The CustomAttributesAndReflection project showcases the practical use of custom attributes and reflection in C#. By using custom validation attributes, the project enforces business rules in a clear and maintainable manner. Reflection allows for dynamic interaction with objects, making the code flexible and adaptable to changing requirements.

@@ -1,0 +1,31 @@
+﻿InheritanceConcepts Project Notes
+
+Overview
+Demonstrates inheritance and interfaces in C# within a banking context.
+
+Key Classes
+
+- ATM Class
+  - Implements IDeposit and IWithdrawal interfaces.
+  - Handles deposit and withdrawal operations.
+  - Manages cash availability in the ATM.
+
+- Bank Class
+  - Abstract base class for banks.
+  - Manages bank details like name and balance.
+  - Provides protected access to balance for subclasses.
+
+- Branch Class
+  - Inherits from Bank.
+  - Can perform operations like showing the current balance.
+
+Key Interfaces
+
+- IDeposit Interface
+  - Defines the contract for deposit operations.
+
+- IWithdrawal Interface
+  - Defines the contract for withdrawal operations.
+
+Application
+Simulates real-world banking operations, including branch management and ATM transactions, to demonstrate OOP principles.
