@@ -25,4 +25,3 @@ Console.WriteLine($"After withdrawal, {account2.AccountHolder}'s Balance: {accou
 
 // Display the total number of accounts created
 Console.WriteLine($"Total number of accounts created: {BankAccount.AccountCount}");
-}

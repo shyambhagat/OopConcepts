@@ -23,9 +23,3 @@ namespace CustomAttributesAndReflection
         }
     }
 }
-
-using System;
-
-using System;
-
-using System;
