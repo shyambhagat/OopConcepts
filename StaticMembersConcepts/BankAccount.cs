@@ -5,10 +5,16 @@ namespace StaticMembersConcepts
     public class BankAccount
     {
         // Static field to store the interest rate for all accounts
-        private static double _interestRate = 0.05;
+        private static double _interestRate;
 
         // Static field to track the total number of accounts created
-        private static int _accountCount = 0;
+        private static int _accountCount;
+
+        static BankAccount()
+        {
+            _interestRate = 0.05;
+            _accountCount = 0;
+        }
 
         // Static property to access the interest rate
         public static double InterestRate
